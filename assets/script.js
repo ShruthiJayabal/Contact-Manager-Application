@@ -49,7 +49,7 @@ addContactForm.addEventListener('submit', (e) => {
   contacts.push({ name, number, email, address });
   saveContacts();
   displayContacts();
-  contactForm.style.display = 'flex';
+  contactForm.style.display = 'none';
   addContactForm.reset();
 });
 

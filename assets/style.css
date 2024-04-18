@@ -121,12 +121,13 @@ body {
   
   .contact-options {
     display: flex;
-    justify-content: space-between;
+    float: left;
+    margin-left: 0px;
     margin-top: 10px;
   }
   
   .edit-btn, .delete-btn {
-    padding: 5px 10px;
+    padding: 0px;
     cursor: pointer;
   }
 
@@ -134,7 +135,7 @@ body {
   .view-btn {
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
-    width:90px;
+    width:60px;
     height: 30px;
     border: 2px solid black;
     color: black;
@@ -150,7 +151,7 @@ body {
   .edit-btn {
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
-    width:90px;
+    width:60px;
     height: 30px;
     border: 2px solid black;
     color: black;
@@ -166,7 +167,7 @@ body {
   .delete-btn {
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
-    width:110px;
+    width:70px;
     height: 30px;
     border: 2px solid black;
     color: black;
