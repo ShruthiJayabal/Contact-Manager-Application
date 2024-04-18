@@ -6,7 +6,7 @@ const contactList = document.getElementById('contact-list');
 let contacts = [];
 
 // Fetch contacts from JSON file
-fetch('contacts.json')
+fetch('contact.json')
   .then(response => response.json())
   .then(data => {
     contacts = data;
@@ -87,3 +87,16 @@ function viewContact(index) {
   const contact = contacts[index];
   alert(`Name: ${contact.name}\nNumber: ${contact.number}\nEmail: ${contact.email}\nAddress: ${contact.address}`);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
