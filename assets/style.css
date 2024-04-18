@@ -115,6 +115,8 @@ body {
   
   .contact {
     border: 1px solid #ccc;
+    display: grid;
+    width:800px;
     padding: 10px;
     border-radius: 5px;
   }
