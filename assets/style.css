@@ -10,7 +10,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.icon{
+.container .icon{
     margin-left: 30px;
     width:250px;
     height: 35px;
@@ -129,16 +129,56 @@ body {
     padding: 5px 10px;
     cursor: pointer;
   }
+
+  
+  .view-btn {
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:90px;
+    height: 30px;
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
+
+  .view-btn:hover{
+    color:white;
+    background-color: black;
+    border: 2px solid black;
+  }
   
   .edit-btn {
-    background-color: #4CAF50;
-    color: white;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:90px;
+    height: 30px;
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
+
+  .edit-btn:hover{
+    color:white;
+    background-color: black;
+    border: 2px solid black;
   }
   
   .delete-btn {
-    background-color: #f44336;
-    color: white;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:110px;
+    height: 30px;
+    border: 2px solid black;
+    color: black;
+    background-color:white;
   }
+
+  .delete-btn:hover{
+    color:white;
+    background-color: black;
+    border: 2px solid black;
+  }
+
 
 
 
