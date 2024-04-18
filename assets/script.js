@@ -55,7 +55,7 @@ addContactForm.addEventListener('submit', (e) => {
 
 // Save contacts to JSON file
 function saveContacts() {
-  fetch('contacts.json', {
+  fetch('contact.json', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
