@@ -1,16 +1,12 @@
-
-
-
-
 .heading{
-    font-size: 20px;
+    font-size: 25px;
     color: black;
     font-weight: 550;
     margin: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.container .icon{
+.container .box{
     margin-left: 30px;
     width:250px;
     height: 35px;
@@ -93,6 +89,9 @@ body {
   }
   
   label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
     margin-left: 50px;
     margin-right: 30px;
     display: block;
@@ -100,12 +99,35 @@ body {
   }
   
   input {
+    font-family: 'Times New Roman', Times, serif;
     margin-left: 50px;
     margin-right: 30px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 30px;
     width: 500px;
     padding: 5px;
     margin-bottom: 10px;
   }
+
+  
+.submit-btn{
+  margin-top: 10px;
+  width:70px;
+  height: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 50px;
+  border-radius: 5px;
+  color:white;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.submit-btn:hover{
+  border: 2px solid black;
+  color: black;
+  background-color:white;
+}
 
   #contact-list {
     display: grid;
