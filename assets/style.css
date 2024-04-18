@@ -109,14 +109,12 @@ body {
   
   #contact-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 30px;
   }
   
   .contact {
     border: 1px solid #ccc;
-    display: grid;
-    width:800px;
+    width:1000px;
     padding: 10px;
     border-radius: 5px;
   }
