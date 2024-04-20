@@ -27,7 +27,7 @@ function displayContacts() {
   
   // Created table header row
   const headerRow = document.createElement('tr');
-  ['Name', 'Number', 'Email', 'Address', 'Options'].forEach(headerText => {
+  ['Name', 'Number', 'Email', 'Address', 'Action'].forEach(headerText => {
     const headerCell = document.createElement('th');
     headerCell.textContent = headerText;
     headerRow.appendChild(headerCell);
@@ -151,7 +151,9 @@ function redirectToHomePage() {
 }
 
 
-
+document.body.style.backgroundImage = "url('images/bg-image.jpeg')";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundPosition = "center";
 
 
 

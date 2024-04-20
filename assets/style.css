@@ -206,8 +206,10 @@ body {
   /* Table */
 
   .contact-table {
+    margin-top: 30px;
     width: 100%;
     border-collapse: collapse;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .contact-table th,
@@ -218,6 +220,7 @@ body {
   }
   
   .contact-table th {
+    text-align: center;
     background-color: white;
   }
   
@@ -226,12 +229,13 @@ body {
   }
   
   .contact-table tr:hover {
-    background-color: #ddd;
+    background-color: white;
   }
   
   .view-btn,
   .edit-btn,
   .delete-btn {
+    margin-top: 10px;
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
