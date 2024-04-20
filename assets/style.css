@@ -9,11 +9,12 @@
 .container .box{
     margin-left: 30px;
     width:250px;
-    height: 35px;
+    height: 22px;
     border-radius: 5px;
     border: 2px solid black;
     color: black;
     background-color:white;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif; 
 }
 
@@ -21,6 +22,7 @@
 .btn1{
     width:70px;
     height: 35px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 10px;
     border-radius: 5px;
@@ -53,6 +55,7 @@ body {
     float: right;
     margin-right: 50px;
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:110px;
     height: 35px;
@@ -99,6 +102,7 @@ body {
   }
   
   input {
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 50px;
     margin-right: 30px;
@@ -115,6 +119,7 @@ body {
   margin-top: 10px;
   width:70px;
   height: 35px;
+  font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
   margin-left: 50px;
   border-radius: 5px;
@@ -155,6 +160,7 @@ body {
 
   
   .view-btn {
+    font-size: 15px;
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
     width:60px;
@@ -172,6 +178,7 @@ body {
   
   .edit-btn {
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:60px;
     height: 30px;
@@ -188,6 +195,7 @@ body {
   
   .delete-btn {
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:70px;
     height: 30px;
@@ -232,17 +240,18 @@ body {
     background-color: white;
   }
   
-  .view-btn,
-  .edit-btn,
-  .delete-btn {
+  .viewbtn,
+  .editbtn,
+  .deletebtn {
     margin-top: 10px;
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
   }
   
-  .view-btn {
+  .viewbtn {
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:70px;
     height: 30px;
@@ -251,8 +260,9 @@ body {
     border: 2px solid black; 
   }
   
-  .edit-btn {
+  .editbtn {
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:70px;
     height: 30px;
@@ -261,8 +271,9 @@ body {
     border: 2px solid black; 
   }
   
-  .delete-btn {
+  .deletebtn {
     border-radius: 5px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     width:70px;
     height: 30px;
@@ -272,24 +283,43 @@ body {
   }
   
 
-  .view-btn:hover{
+  .viewbtn:hover{
     border: 2px solid black;
     color: black;
     background-color:white;
   }
 
-  .edit-btn:hover{
+  .editbtn:hover{
     border: 2px solid black;
     color: black;
     background-color:white;
   }
 
-  .delete-btn:hover{
+  .deletebtn:hover{
     border: 2px solid black;
     color: black;
     background-color:white;
   }
 
+
+  .back-btn {
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    width:90px;
+    height: 30px;
+    float: left;
+    color:white;
+    background-color: black;
+    border: 2px solid black; 
+  }
+
+  
+  .back-btn:hover{
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
 
 
   

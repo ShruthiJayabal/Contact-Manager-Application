@@ -47,19 +47,19 @@ function displayContacts() {
     const optionsCell = document.createElement('td');
     const viewBtn = document.createElement('button');
     viewBtn.textContent = 'View';
-    viewBtn.classList.add('view-btn');
+    viewBtn.classList.add('viewbtn');
     viewBtn.addEventListener('click', () => viewContact(index));
     optionsCell.appendChild(viewBtn);
 
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Edit';
-    editBtn.classList.add('edit-btn');
+    editBtn.classList.add('editbtn');
     editBtn.addEventListener('click', () => editContact(index));
     optionsCell.appendChild(editBtn);
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-    deleteBtn.classList.add('delete-btn');
+    deleteBtn.classList.add('deletebtn');
     deleteBtn.addEventListener('click', () => deleteContact(index));
     optionsCell.appendChild(deleteBtn);
 
@@ -138,7 +138,7 @@ function viewContact(index) {
       <p> Email : ${contact.email}</p>
       <p> Address : ${contact.address}</p>
       <div class="contact-options">
-        <button class="edit-btn" onclick="displayContacts()">Go Back</button>
+        <button class="back-btn" onclick="displayContacts()">Go Back</button>
       </div>
        `;
     contactList.appendChild(contactElement);
