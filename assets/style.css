@@ -147,6 +147,25 @@ body {
   background-color:white;
 }
 
+.cancel-btn{
+  margin-top: 10px;
+  width:70px;
+  height: 35px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left:0px;
+  border-radius: 5px;
+  color:white;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.cancel-btn:hover{
+  border: 2px solid black;
+  color: black;
+  background-color:white;
+}
+
   #contact-list {
     display: grid;
     gap: 30px;
