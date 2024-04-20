@@ -5,7 +5,7 @@ const contactList = document.getElementById('contact-list');
 
 let contacts = [];
 
-// Fetch contacts from JSON file
+// Fetched the contacts from JSON file
 fetch('contact.json')
   .then(response => response.json())
   .then(data => {
@@ -13,25 +13,61 @@ fetch('contact.json')
     displayContacts();
   });
 
-// Display contacts in the contact list
+// Displays contacts in the contact list
 function displayContacts() {
   contactList.innerHTML = '';
-  contacts.forEach((contact, index) => {
-    const contactElement = document.createElement('div');
-    contactElement.classList.add('contact');
-    contactElement.innerHTML = `
-      <h3>${contact.name}</h3>
-      <p>${contact.number}</p>
-      <p>${contact.email}</p>
-      <p>${contact.address}</p>
-      <div class="contact-options">
-        <button class="view-btn" onclick="viewContact(${index})">View</button>
-        <button class="edit-btn" onclick="editContact(${index})">Edit</button>
-        <button class="delete-btn" onclick="deleteContact(${index})">Delete</button>
-      </div>
-    `;
-    contactList.appendChild(contactElement);
+  
+  if (contacts.length === 0) {
+    contactList.innerHTML = '<p></p>';
+    return;
+  }
+
+  const table = document.createElement('table');
+  table.classList.add('contact-table');
+  
+  // Created table header row
+  const headerRow = document.createElement('tr');
+  ['Name', 'Number', 'Email', 'Address', 'Options'].forEach(headerText => {
+    const headerCell = document.createElement('th');
+    headerCell.textContent = headerText;
+    headerRow.appendChild(headerCell);
   });
+  table.appendChild(headerRow);
+
+  // Created table rows with contact details
+  contacts.forEach((contact, index) => {
+    const row = document.createElement('tr');
+    ['name', 'number', 'email', 'address'].forEach(key => {
+      const cell = document.createElement('td');
+      cell.textContent = contact[key];
+      row.appendChild(cell);
+    });
+
+    // Added options column with buttons
+    const optionsCell = document.createElement('td');
+    const viewBtn = document.createElement('button');
+    viewBtn.textContent = 'View';
+    viewBtn.classList.add('view-btn');
+    viewBtn.addEventListener('click', () => viewContact(index));
+    optionsCell.appendChild(viewBtn);
+
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'Edit';
+    editBtn.classList.add('edit-btn');
+    editBtn.addEventListener('click', () => editContact(index));
+    optionsCell.appendChild(editBtn);
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.classList.add('delete-btn');
+    deleteBtn.addEventListener('click', () => deleteContact(index));
+    optionsCell.appendChild(deleteBtn);
+
+    row.appendChild(optionsCell);
+    table.appendChild(row);
+  });
+
+  contactList.appendChild(table);
 }
 
 
@@ -39,13 +75,12 @@ function displayContacts() {
 
 
 
-
-// Add contact button click event
+// Added contact button click event
 addContactBtn.addEventListener('click', () => {
   contactForm.style.display = 'block';
 });
 
-// Add contact form submit event
+// Added contact form submit event
 addContactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value;

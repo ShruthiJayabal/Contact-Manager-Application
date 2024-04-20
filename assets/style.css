@@ -203,9 +203,88 @@ body {
   }
 
 
+  /* Table */
 
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contact-table th,
+  .contact-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .contact-table th {
+    background-color: white;
+  }
+  
+  .contact-table tr:nth-child(even) {
+    background-color: white;
+  }
+  
+  .contact-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .view-btn,
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .view-btn {
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:70px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    border: 2px solid black; 
+  }
+  
+  .edit-btn {
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:70px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    border: 2px solid black; 
+  }
+  
+  .delete-btn {
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    width:70px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    border: 2px solid black; 
+  }
+  
 
+  .view-btn:hover{
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
 
+  .edit-btn:hover{
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
+
+  .delete-btn:hover{
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+  }
 
 
 
