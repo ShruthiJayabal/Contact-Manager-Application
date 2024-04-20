@@ -83,16 +83,31 @@ function editContact(index) {
 }
 
 // View contact
+
+
 function viewContact(index) {
   const contact = contacts[index];
-  alert(`Name: ${contact.name}\nNumber: ${contact.number}\nEmail: ${contact.email}\nAddress: ${contact.address}`);
+  contactList.innerHTML = '';
+  contacts.forEach((contact, index) => {
+    const contactElement = document.createElement('div');
+    contactElement.classList.add('contact');
+    contactElement.innerHTML = `
+      <p> Name : ${contact.name}</p>
+      <p> Mobile Number : ${contact.number}</p>
+      <p> Email : ${contact.email}</p>
+      <p> Address : ${contact.address}</p>
+      <div class="contact-options">
+        <button class="edit-btn" onclick="displayContacts()">Go Back</button>
+      </div>
+       `;
+    contactList.appendChild(contactElement);
+  });
 }
 
 
-
-
-
-
+function redirectToHomePage() {
+  window.location.href = "index.html";
+}
 
 
 
