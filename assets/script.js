@@ -34,6 +34,12 @@ function displayContacts() {
   });
 }
 
+
+
+
+
+
+
 // Add contact button click event
 addContactBtn.addEventListener('click', () => {
   contactForm.style.display = 'block';
