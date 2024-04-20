@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Manager</title>
-<link rel="stylesheet" href="./assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Manager</title>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-<div class="container">
-  <h1 class="heading">CONTACT</h1>
-    
-  <input type="text" id="userid" class="box">
-  <button class="btn1">Search</button>
+  <div class="container">
+    <h1 class="heading">CONTACT</h1>
 
-  <button id="add-contact-btn" class="btn">Add Contact</button>
-  <br>
-  <br>
+    <input type="text" id="userid" class="box">
+    <button class="btn1">Search</button>
 
-  <div id="contact-form" style="display:none;">
-    <form id="add-contact-form" class="form-box">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required><br>
-      <label for="number">Number:</label>
-      <input type="text" id="number" required><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" required><br>
-      <label for="address">Address:</label>
-      <input type="text" id="address" required><br>
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+    <button id="add-contact-btn" class="btn">Add Contact</button>
+    <br>
+    <br>
+    <div class="form">
+      <div id="contact-form" style="display:none;">
+        <form id="add-contact-form" class="form-box">
+          <p class="new-contact"> New Contact</p>
+          <label for="name">Name:</label>
+          <input type="text" id="name" required><br>
+          <label for="number">Number:</label>
+          <input type="text" id="number" required><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required><br>
+          <label for="address">Address:</label>
+          <input type="text" id="address" required><br>
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="button" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <div id="contact-list"></div>
   </div>
-  <div id="contact-list"></div>
-</div>
-<script src="./assets/script.js"></script>
+  <script src="./assets/script.js"></script>
 </body>
+
 </html>
-
-
-
-

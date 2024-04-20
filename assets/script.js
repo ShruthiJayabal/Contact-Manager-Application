@@ -70,6 +70,11 @@ function displayContacts() {
   contactList.appendChild(table);
 }
 
+contactForm.style.position = 'fixed';
+contactForm.style.top = '60%';
+contactForm.style.left = '45%';
+contactForm.style.transform = 'translate(-50%, -50%)';
+contactForm.style.zIndex = '9999';
 
 
 
@@ -79,6 +84,11 @@ function displayContacts() {
 addContactBtn.addEventListener('click', () => {
   contactForm.style.display = 'block';
 });
+
+function closeForm() {
+  document.getElementById('add-contact-form').reset();
+  document.getElementById('add-contact-form').style.display = 'none';
+}
 
 // Added contact form submit event
 addContactForm.addEventListener('submit', (e) => {
@@ -90,6 +100,7 @@ addContactForm.addEventListener('submit', (e) => {
   contacts.push({ name, number, email, address });
   saveContacts();
   displayContacts();
+  closeForm();
   contactForm.style.display = 'none';
   addContactForm.reset();
 });
@@ -124,8 +135,6 @@ function editContact(index) {
 }
 
 // View contact
-
-
 function viewContact(index) {
   const contact = contacts[index];
   contactList.innerHTML = '';
