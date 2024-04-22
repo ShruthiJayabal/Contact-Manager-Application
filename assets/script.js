@@ -6,12 +6,24 @@ const contactList = document.getElementById('contact-list');
 let contacts = [];
 
 // Fetched the contacts from JSON file
-fetch('contact.json')
-  .then(response => response.json())
-  .then(data => {
-    contacts = data;
-    displayContacts();
-  });
+// Load contacts from JSON file
+function loadContacts() {
+  fetch('contact.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          contacts = data;
+          displayContacts();
+      })
+      .catch(error => {
+          console.error('Error loading contacts:', error);
+      });
+} 
+
 
 // Displays contacts in the contact list
 function displayContacts() {
@@ -78,8 +90,6 @@ contactForm.style.zIndex = '9999';
 
 
 
-
-
 // Added contact button click event
 addContactBtn.addEventListener('click', () => {
   contactForm.style.display = 'block';
@@ -103,7 +113,7 @@ addContactForm.addEventListener('submit', (e) => {
 
 // Save contacts to JSON file
 function saveContacts() {
-  fetch('contact.json', {
+  fetch('contacts.json', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -111,6 +121,8 @@ function saveContacts() {
     body: JSON.stringify(contacts)
   });
 }
+
+
 
 // Delete contact
 function deleteContact(index) {
