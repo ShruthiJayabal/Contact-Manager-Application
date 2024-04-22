@@ -85,20 +85,6 @@ addContactBtn.addEventListener('click', () => {
   contactForm.style.display = 'block';
 });
 
-function closeForm() {
-  document.getElementById('add-contact-form').reset();
-  document.getElementById('add-contact-form').style.display = 'none';
-}
-
-const cancelBtn = document.getElementById('cancel-btn');
-cancelBtn.addEventListener('click', () => {
-  closeForm();
-});
-
-addContactBtn.addEventListener('click', () => {
-  document.getElementById('add-contact-form').reset();
-  document.getElementById('add-contact-form').style.display = 'block';
-});
 
 // Added contact form submit event
 addContactForm.addEventListener('submit', (e) => {
@@ -110,7 +96,6 @@ addContactForm.addEventListener('submit', (e) => {
   contacts.push({ name, number, email, address });
   saveContacts();
   displayContacts();
-  closeForm();
   contactForm.style.display = 'none';
   addContactForm.reset();
 });
