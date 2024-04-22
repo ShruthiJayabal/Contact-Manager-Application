@@ -6,7 +6,7 @@ const contactList = document.getElementById('contact-list');
 let contacts = [];
 
 // Fetched the contacts from JSON file
-fetch('contacts.json')
+fetch('contact.json')
   .then(response => response.json())
   .then(data => {
     contacts = data;
@@ -102,7 +102,7 @@ addContactForm.addEventListener('submit', (e) => {
 
 // Save contacts to JSON file
 function saveContacts() {
-  fetch('contacts.json', {
+  fetch('contact.json', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
