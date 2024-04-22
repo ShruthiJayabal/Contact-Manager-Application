@@ -100,6 +100,7 @@ addContactForm.addEventListener('submit', (e) => {
   addContactForm.reset();
 });
 
+
 // Save contacts to JSON file
 function saveContacts() {
   fetch('contact.json', {
