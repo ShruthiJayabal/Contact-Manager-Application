@@ -6,23 +6,12 @@ const contactList = document.getElementById('contact-list');
 let contacts = [];
 
 // Fetched the contacts from JSON file
-// Load contacts from JSON file
-function loadContacts() {
-  fetch('contact.json')
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          contacts = data;
-          displayContacts();
-      })
-      .catch(error => {
-          console.error('Error loading contacts:', error);
-      });
-} 
+fetch('contacts.json')
+  .then(response => response.json())
+  .then(data => {
+    contacts = data;
+    displayContacts();
+  });
 
 
 // Displays contacts in the contact list
